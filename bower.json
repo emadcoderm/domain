@@ -1,0 +1,28 @@
+{
+  "name": "studionesia",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests",
+    "Gruntfile.js",
+    "package.json",
+    "src"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.4",
+    "admin-lte": "~2.1",
+    "font-awesome": "~4.3.0",
+    "bootstrap-datepicker": "~1.4.0",
+    "bootstrap-select": "~1.7",
+    "jquery-confirm": "~2.5.0",
+    "bootstrap3-wysihtml5-bower": "~0.3.3",
+    "ionicons": "~2.0.1"
+  }
+}

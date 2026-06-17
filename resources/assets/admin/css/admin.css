@@ -1,0 +1,14 @@
+.validation button {
+  list-style: none;
+}
+.validation span {
+  display: list-item;
+  margin-left: 10px;
+}
+.bg-black-50 {
+  background-color: #222222;
+}
+.bg-gray-50 {
+  background-color: #eaeaec !important;
+  color: #444;
+}
