@@ -8,12 +8,17 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     zip \
     unzip \
-    libmcrypt-dev \
-    && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd mcrypt
+    && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 COPY . /var/www/html/
+
+# تصحیح فایل config/app.php قبل از نصب
+RUN sed -i "s/MCRYPT_RIJNDAEL_128/'AES-256-CBC'/" /var/www/html/config/app.php
+
+# حذف vendor و composer.lock برای نصب دوباره
+RUN rm -rf vendor composer.lock
 
 RUN composer install --no-dev --ignore-platform-reqs
 
